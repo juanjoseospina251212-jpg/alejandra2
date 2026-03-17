@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Planner Premium</title>
+
+  <!-- SF Pro fallback (no oficial en web, usamos system-ui como similar) -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Display", system-ui, sans-serif;
+      background: linear-gradient(135deg, #fff1f7, #e6f7ff);
+      color: #444;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #ffd6e0, #d6ecff);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #6d597a;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.3rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      background: rgba(255,255,255,0.8);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6d597a;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      color: #b5838d;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 30px;
+      border-radius: 30px;
+      background: #a2d2ff;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #89c2d9; }
+
+    .services, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #d6ecff, #fff1f7);
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Elegance Wedding</h1>
+  <p>Diseñamos momentos que duran para siempre</p>
+</header>
+
+<nav>
+  <a href="#">Inicio</a>
+  <a href="#services">Servicios</a>
+  <a href="#gallery">Galería</a>
+  <a href="#testimonials">Opiniones</a>
+  <a href="#contact">Contacto</a>
+</nav>
+
+<section class="hero">
+  <h2>La boda que imaginas, hecha realidad</h2>
+  <p>Convertimos ideas en experiencias únicas, con estilo, detalle y perfección.</p>
+  <a href="#contact" class="btn">Empezar ahora</a>
+</section>
+
+<section id="services">
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card"><h3>Planeación total</h3><p>Desde cero hasta el último detalle.</p></div>
+    <div class="card"><h3>Decoración premium</h3><p>Ambientes elegantes con diseño moderno.</p></div>
+    <div class="card"><h3>Coordinación</h3><p>Control total del evento en vivo.</p></div>
+    <div class="card"><h3>Asesoría personalizada</h3><p>Te guiamos en cada decisión.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Galería</h2>
+  <div class="gallery">
+    <img src="https://source.unsplash.com/400x300/?wedding"/>
+    <img src="https://source.unsplash.com/401x300/?wedding"/>
+    <img src="https://source.unsplash.com/402x300/?wedding"/>
+    <img src="https://source.unsplash.com/403x300/?wedding"/>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>Opiniones</h2>
+  <div class="testimonials">
+    <div class="card"><p>"Todo fue perfecto, mejor de lo que soñamos."</p></div>
+    <div class="card"><p>"La organización fue impecable."</p></div>
+    <div class="card"><p>"Repetiríamos mil veces."</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contacto</h2>
+  <p>Email: alecorgu11@gmail.com</p>
+  <p>Teléfono: +57 304 6338009</p>
+
+  <form action="mailto:alecorgu11@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="correo" placeholder="Correo" required>
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Wedding Planner Premium</p>
+</footer>
+
+</body>
+</html>
